@@ -1,2 +1,3 @@
 Hello world
 Hello world 2
+print("Hello my dear friend")
