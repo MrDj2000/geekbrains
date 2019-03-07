@@ -1,4 +1,4 @@
-Hello world
-Hello world 2
-print("Hello my dear friend")
-print("Glad to see you")
+Hello world;
+Hello world 2;
+print("Hello my dear friend;")
+print("Glad to see you;")
