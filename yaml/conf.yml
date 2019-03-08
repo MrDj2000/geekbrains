@@ -1,6 +1,1 @@
-# Преимущество - не нужно выискивать кавычки
-{
-    entrypoint: main.py,
-    host: localhost,
-    port: 8000
-}
+{entrypoint: main.py, host: loaclhost, port: 8000}

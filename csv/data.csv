@@ -1,4 +1,1 @@
-"name", "desr", "cost"
-"apple", "some, apple", "100"
-"potato", "some POTATO", "200"
-"Onion", "some onion", "300"
+"['name', 'desc', 'cost']","['apple', 'some, apple', '100']","['potato', 'some, potato', '200']","['onion', 'some, onion', '300']"
