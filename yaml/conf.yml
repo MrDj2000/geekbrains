@@ -1,0 +1,6 @@
+# Преимущество - не нужно выискивать кавычки
+{
+    entrypoint: main.py,
+    host: localhost,
+    port: 8000
+}
