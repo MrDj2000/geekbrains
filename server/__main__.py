@@ -10,13 +10,14 @@ while True:
     client, address = sock.accept()
     print(f'Client detected {address}')
     data = client.recv(1024)
-    request = json.loads(data.decode('utf-8'))
-
-    json.loads(request)
+    request = json.loads(
+        data.decode('utf-8')
+    )
 
     if request.get('action') == 'get_time':
         date = datetime.now()
-        response_string = date.strtime('%d-%m-%y T%H:%M:%S')
+        response_string = date.strftime('%d-%m-%y T%H:%M:%S')
+
     elif request.get('action') == 'upper_text':
         client_data = request.get('data')
         response_string = client_data.upper()
