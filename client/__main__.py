@@ -8,7 +8,10 @@ action = input('Enter action: ')
 data = input('Data: ')
 
 request_string = json.dumps(
-     {'action': action, 'data': data}
+     {
+         'action': action,
+         'data': data
+     }
 )
 
 socket.send(request_string.encode())

@@ -1,6 +1,6 @@
 import json
 import socket
-from datetime import datetime
+import .text import routes
 
 sock = socket.socket()
 sock.bind(('', 8000))
@@ -14,13 +14,22 @@ while True:
         data.decode('utf-8')
     )
 
-    if request.get('action') == 'get_time':
-        date = datetime.now()
-        response_string = date.strftime('%d-%m-%y T%H:%M:%S')
+    client_action = request.get('action')
 
-    elif request.get('action') == 'upper_text':
-        client_data = request.get('data')
-        response_string = client_data.upper()
+    resolved_routes = list(
+        filter(
+            lambda itm: itm.get('action') == client_action,
+            get_server_routes()
+        )
+    )
+
+    resolved_routes[0] if resolved_routes else None
+
+    if routes:
+        controller = routes.get('controller')
+        controller = controller(request.get('data'))
+    else
+        response_string = 'Action not supported'
 
     print(response_string)
     client.send(response_string.encode('utf-8'))
